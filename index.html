@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | EduTrust Web Agency</title>
+  <meta name="description" content="Professional school website development and digital compliance support for CBSE/CISCE schools across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eefbf4', 100: '#d6f5e4', 200: '#b0eacd',
+              300: '#7cdaaf', 400: '#48c38d', 500: '#22a973',
+              600: '#14895c', 700: '#106e4b', 800: '#10573d',
+              900: '#0e4833', 950: '#06281d',
+            },
+            surface: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0' },
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(40px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.7' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .gradient-mesh {
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(20, 137, 92, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(34, 169, 115, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(72, 195, 141, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 antialiased">
+
+  <!-- ───── NAVIGATION ───── -->
+  <nav class="fixed top-0 inset-x-0 z-50 glass border-b border-white/40 transition-all duration-300" id="main-nav">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-[72px]">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group" id="nav-logo">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <span class="text-lg font-extrabold bg-gradient-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent">EduTrust</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-1" id="nav-desktop-menu">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-brand-700 bg-brand-50 transition-colors">Home</a>
+          <a href="services.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-500 hover:text-brand-700 hover:bg-brand-50/60 transition-colors">Services</a>
+          <a href="packages.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-500 hover:text-brand-700 hover:bg-brand-50/60 transition-colors">Packages</a>
+          <a href="portfolio.html" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-500 hover:text-brand-700 hover:bg-brand-50/60 transition-colors">Portfolio</a>
+          <a href="contact.html" class="ml-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-200">Contact Us</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" id="mobile-menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden border-t border-slate-200/60 bg-white/95 backdrop-blur-lg" id="mobile-menu">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-brand-700 bg-brand-50">Home</a>
+        <a href="services.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50">Services</a>
+        <a href="packages.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50">Packages</a>
+        <a href="portfolio.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50">Portfolio</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 text-center mt-2">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <section class="relative min-h-[92vh] flex items-center overflow-hidden gradient-mesh pt-20" id="hero-section">
+    <!-- Decorative blobs -->
+    <div class="hero-blob w-96 h-96 bg-brand-300 top-10 -left-32 animate-float"></div>
+    <div class="hero-blob w-80 h-80 bg-emerald-200 bottom-20 right-0 animate-float" style="animation-delay:2s"></div>
+    <div class="hero-blob w-64 h-64 bg-teal-200 top-1/2 left-1/2 animate-float" style="animation-delay:4s"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+
+        <!-- Left Content -->
+        <div class="lg:col-span-3 animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100/80 border border-brand-200/50 mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse-soft"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">For CBSE / CISCE Schools</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-slate-900 mb-6">
+            School websites that build
+            <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-emerald-400 bg-clip-text text-transparent"> parent trust</span>
+            &amp; drive
+            <span class="bg-gradient-to-r from-brand-600 via-brand-500 to-emerald-400 bg-clip-text text-transparent"> admissions</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-500 max-w-xl mb-8 leading-relaxed">
+            We create professional school websites with public disclosure, admission enquiry forms, documents, notices, gallery, WhatsApp integration and monthly update support.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="contact.html" class="group inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300" id="hero-cta-audit">
+              Request Free Audit
+              <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="portfolio.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-sm font-bold text-brand-700 bg-white border border-brand-200 shadow-sm hover:shadow-md hover:border-brand-300 hover:-translate-y-0.5 transition-all duration-300" id="hero-cta-demo">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg>
+              View Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Card -->
+        <div class="lg:col-span-2 animate-slide-in-right" style="animation-delay:0.3s">
+          <div class="relative glass rounded-3xl border border-white/60 shadow-2xl shadow-brand-900/5 p-8 overflow-hidden">
+            <!-- Decorative corner gradient -->
+            <div class="absolute -top-12 -right-12 w-36 h-36 bg-gradient-to-br from-brand-400/20 to-emerald-300/20 rounded-full blur-2xl"></div>
+
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">What schools get</h3>
+              </div>
+
+              <ul class="space-y-3.5">
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <span class="text-sm text-slate-600 leading-snug">Parent-friendly admission information</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <span class="text-sm text-slate-600 leading-snug">Mandatory public disclosure section</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <span class="text-sm text-slate-600 leading-snug">Notice, gallery &amp; document updates</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <span class="text-sm text-slate-600 leading-snug">Mobile responsive &amp; professional design</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <span class="text-sm text-slate-600 leading-snug">Monthly maintenance support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── VALUE PROPS ───── -->
+  <section class="py-24 lg:py-32 bg-white" id="value-section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-xs font-bold uppercase tracking-wider text-brand-600 mb-4">Why choose us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">We do more than website development</h2>
+        <p class="text-slate-500 text-lg">Helping schools present themselves professionally, build trust, and grow admissions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Card 1 -->
+        <div class="group relative bg-white rounded-2xl border border-slate-100 p-8 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 hover:-translate-y-1 transition-all duration-300" id="value-trust">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-800 mb-3">Build Trust</h3>
+          <p class="text-slate-500 leading-relaxed">A modern website helps parents feel confident about your school before they call or visit. First impressions matter.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative bg-white rounded-2xl border border-slate-100 p-8 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 hover:-translate-y-1 transition-all duration-300" id="value-admissions">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-800 mb-3">Grow Admissions</h3>
+          <p class="text-slate-500 leading-relaxed">Clear admission pages and enquiry forms help schools capture parent interest and convert visits into enrolments.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative bg-white rounded-2xl border border-slate-100 p-8 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 hover:-translate-y-1 transition-all duration-300" id="value-compliance">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-800 mb-3">Compliance Support</h3>
+          <p class="text-slate-500 leading-relaxed">Organized public disclosure, documents and certificate sections reduce confusion and help meet board requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CTA ───── -->
+  <section class="py-24 lg:py-32 gradient-mesh" id="cta-section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-600 to-emerald-500 p-10 sm:p-16 text-center shadow-2xl shadow-brand-900/20">
+        <!-- Decorative circles -->
+        <div class="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-white/5"></div>
+        <div class="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-white/5"></div>
+
+        <div class="relative z-10">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Want a free website audit for your school?</h2>
+          <p class="text-brand-100 text-lg max-w-lg mx-auto mb-8">We'll review your current website or online presence and share 3–5 practical improvement points — completely free.</p>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-bold text-brand-700 bg-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300" id="cta-btn-audit">
+            Book Free Audit
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="border-t border-slate-200 bg-white" id="site-footer">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <span class="text-sm font-bold text-slate-700">EduTrust Web Agency</span>
+        </div>
+        <p class="text-sm text-slate-400">&copy; 2026 EduTrust Web Agency. Professional websites for CBSE/CISCE schools.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
